@@ -1,35 +1,35 @@
 version: 2.1
-# commands:
-#   install_awscli:
-#     description: Install Aws CLI v2
-#     steps:
-#       - run:
-#           name: Install Aws CLI v2
-#           command: |
-#             curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-#             unzip awscliv2.zip
-#             sudo ./aws/install
+commands:
+  install_awscli:
+    description: Install Aws CLI v2
+    steps:
+      - run:
+          name: Install Aws CLI v2
+          command: |
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install
 
-#   install_ansible:
-#     description: Install Ansible 
-#     steps:
-#       - run:
-#           name: Install Ansible 
-#           command: |
-#             sudo apt update
-#             sudo apt install software-properties-common --yes
-#             sudo add-apt-repository --yes --update ppa:ansible/ansible --yes
-#             sudo apt install ansible -y         
+  install_ansible:
+    description: Install Ansible 
+    steps:
+      - run:
+          name: Install Ansible 
+          command: |
+            sudo apt update
+            sudo apt install software-properties-common --yes
+            sudo add-apt-repository --yes --update ppa:ansible/ansible --yes
+            sudo apt install ansible -y         
 
-#   install_nodejs:  #we will install nodejs 13
-#     description: Install Node.js 13
-#     steps:
-#       - run:
-#           name: Install Node.js 13
-#           command: |
-#             # Install Node.js LTS version as our base Node.js version
-#             curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-#             sudo apt install -y nodejs
+  install_nodejs:  #we will install nodejs 13
+    description: Install Node.js 13
+    steps:
+      - run:
+          name: Install Node.js 13
+          command: |
+            # Install Node.js LTS version as our base Node.js version
+            curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+            sudo apt install -y nodejs
 
 
   # destroy-environment:
