@@ -31,7 +31,7 @@ async function bootstrap() {
     .addTag('customTag')
     .setBasePath(apiVersionPrefix)
     .addBearerAuth()
-    .build();
+    .build()x;
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup(`api/${apiVersionPrefix}`, app, document);
   const config: ConfigService = app.get('ConfigService');
